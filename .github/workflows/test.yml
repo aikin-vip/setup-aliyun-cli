@@ -17,6 +17,7 @@ jobs:
       - name: Setup Aliyun CLI
         uses: ./
         with:
+          aliyun-cli-version: 3.0.55
           access-key-id: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
           access-key-secret: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
           region: ${{ secrets.ALIYUN_REGION }}

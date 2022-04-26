@@ -15,16 +15,37 @@ Action steps.
 
 ## Usage
 
+Use latest release of aliyun-cli 
+
 ```yaml
 steps:
 - uses: actions/checkout@v1
-- uses: hughcube/aliyun-cli-action@v1.0.0
+- uses: JCBLE/setup-aliyun-cli@v1.1.0
   with:
     access-key-id: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
     access-key-secret: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
     region: ${{ secrets.ALIYUN_REGION }}
+  env:
+    # use GITHUB_TOKEN to avoid trigger rate limit
+    # https://docs.github.com/en/actions/security-guides/automatic-token-authentication
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 - run: aliyun oss cp ./dir oss://backet/path -r -u
 ```
+
+Specify aliyun-cli version
+
+```yaml
+steps:
+- uses: actions/checkout@v1
+- uses: JCBLE/setup-aliyun-cli@v1.1.0
+  with:
+    access-key-id: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
+    access-key-secret: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+    region: ${{ secrets.ALIYUN_REGION }}
+    aliyun-cli-version: 3.0.117
+- run: aliyun oss cp ./dir oss://backet/path -r -u
+```
+
 
 ## License
 
