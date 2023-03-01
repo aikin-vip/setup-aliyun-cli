@@ -1,4 +1,4 @@
-name: 'Setup Aliyun(Alibaba Cloud) CLI'
+name: 'Setup Aliyun CLI'
 description: 'Setup Aliyun command line tool, add it to the PATH and configure authentication'
 author: 'DevOps Team <devops@jcble.com>'
 inputs:
