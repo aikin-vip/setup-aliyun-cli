@@ -94,7 +94,7 @@ inputs:
     description: 'add `--quiet` to hide normal output'
 
 runs:
-  using: 'node12'
+  using: 'node18'
   main: 'index.js'
 
 branding:
