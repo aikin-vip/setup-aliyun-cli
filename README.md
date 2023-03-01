@@ -11,7 +11,7 @@ Use latest release of aliyun-cli
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: aikin-vup/setup-aliyun-cli@v2.0.0
+- uses: aikin-vip/setup-aliyun-cli@v2.0.0
   with:
     access-key-id: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
     access-key-secret: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
@@ -28,7 +28,7 @@ Specify aliyun-cli version
 ```yaml
 steps:
 - uses: actions/checkout@v1
-- uses: aikin-vup/setup-aliyun-cli@v2.0.0
+- uses: aikin-vip/setup-aliyun-cli@v2.0.0
   with:
     access-key-id: ${{ secrets.ALIYUN_ACCESS_KEY_ID }}
     access-key-secret: ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
